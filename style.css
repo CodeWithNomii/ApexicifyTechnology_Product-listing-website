@@ -1,0 +1,310 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --accent-color: #00d4ff;
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Background Glow Effect --- */
+.bg-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, #1a1a2e 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, #001f3f 0%, transparent 30%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.btn-main {
+    background: var(--text-main);
+    color: black;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-main:hover {
+    transform: translateY(-2px);
+    background: var(--accent-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 10% 4rem;
+}
+
+.badge {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero p {
+    color: var(--text-dim);
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* --- Slider & Cards --- */
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card {
+    min-width: 300px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ctrl-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.ctrl-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: black;
+}
+
+/* --- About Section --- */
+.about-section {
+    padding: 10rem 10%;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.stat-item p {
+    color: var(--text-dim);
+}
+
+
+/* --- Footer Design --- */
+.footer {
+    position: relative;
+    padding: 4rem 10% 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid var(--border-color);
+    background: linear-gradient(to top, rgba(0, 212, 255, 0.02), transparent);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Subtle glow line at the very top of the footer */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.footer p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the copyright text */
+.footer p:hover {
+    color: var(--text-main);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Quick Bonus: Mobile Optimization --- */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 5% 1.5rem;
+    }
+    
+    .footer::before {
+        width: 60%; /* Wider glow line on mobile */
+    }
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        justify-items: center;
+    }
+    
+    .nav-links {
+        display: none; /* Add a burger menu logic in JS if needed */
+    }
+}

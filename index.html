@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apexcify Technologys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">Apexcify<span>.</span></div>
+        <div class="nav-links">
+            <a href="#">Solutions</a>
+            <a href="#about">About</a>
+            <button class="btn-main">Get Started</button>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-text">
+            <span class="badge">Innovation First</span>
+            <h1>Next-Gen <br>Tech Solutions</h1>
+            <p>Building the digital infrastructure for tomorrow's industry leaders.</p>
+        </div>
+
+        <div class="slider-container">
+            <div class="gallery-wrapper">
+                <div class="gallery" id="gallery-track">
+                    <div class="card"
+                        onclick="openLightbox('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800" alt="Cloud">
+                        <div class="card-content">
+                            <h3>Cloud Architecture</h3>
+                            <p>Scalable enterprise solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        onclick="openLightbox('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Cyber">
+                        <div class="card-content">
+                            <h3>Cyber Security</h3>
+                            <p>Advanced threat protection.</p>
+                        </div>
+                    </div>
+                    <div class="card"
+                        onclick="openLightbox('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Cyber">
+                        <div class="card-content">
+                            <h3>Cyber Security</h3>
+                            <p>Advanced threat protection.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        onclick="openLightbox('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" alt="AI">
+                        <div class="card-content">
+                            <h3>AI Integration</h3>
+                            <p>Neural network deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev" class="ctrl-btn">←</button>
+                <button id="next" class="ctrl-btn">→</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="lb" class="lightbox" onclick="this.style.display='none'">
+        <!-- <img id="lb-img" src="" alt="View"> -->
+    </div>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <span class="badge">Who we are</span>
+                <h2>Architecting the <br>Future of Web</h2>
+                <p>We specialize in building production-ready software and high-performance digital ecosystems. From
+                    Node.js backends to interactive 3D interfaces, we push the boundaries of what's possible.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h4>3+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>MERN</h4>
+                        <p>Core Stack</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2026-Apexcify Technologys. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
