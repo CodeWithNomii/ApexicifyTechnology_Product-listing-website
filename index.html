@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Product Showroom</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Gallery</h1>
+            <div class="filter-section">
+                <label for="categoryFilter">Filter Category:</label>
+                <select id="categoryFilter">
+                    <option value="all">All Items</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Design">Design</option>
+                </select>
+            </div>
+        </header>
+
+        <main id="product-display" class="fade-in">
+            <div class="product-spotlight">
+                <div class="image-box">
+                    <img id="product-image" src="" alt="Product">
+                    <div id="category-tag">Category</div>
+                </div>
+
+                <div class="content-box">
+                    <h2 id="product-title">Loading...</h2>
+                    <p class="price-tag">$<span id="product-price">0.00</span></p>
+
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="label">Vendor</span>
+                            <span id="product-owner" class="value">---</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Availability</span>
+                            <span class="value">In Stock</span>
+                        </div>
+                    </div>
+
+                    <div id="product-desc-container">
+                        <p id="product-desc" class="description">
+                            Select a product to see details.
+                        </p>
+                    </div>
+
+                    <a href="#" id="order-btn" class="buy-btn">Order Now</a>
+                </div>
+            </div>
+        </main>
+
+        <nav class="controls">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </nav>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
